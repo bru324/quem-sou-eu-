@@ -1,0 +1,118 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    background-color: #f8e0e0; /* Rosa pálido */
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    position: relative;
+    max-width: 600px;
+    background-color: #fff0f0;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(156, 77, 92, 0.3);
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Texto */
+.content h1 {
+    color: #9c4d5c;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1em;
+    color: #5e3a3a;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botão */
+.btn {
+    background-color: #9c4d5c;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #7e3b48;
+    transform: scale(1.05);
+}
+
+/* Imagens decorativas */
+.img.decor {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #f8e0e0;
+    box-shadow: 0 0 10px rgba(156, 77, 92, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.top-left {
+    top: -20px;
+    left: -20px;
+    animation-delay: 0s;
+}
+
+.top-right {
+    top: -20px;
+    right: -20px;
+    animation-delay: 0.5s;
+}
+
+.bottom-left {
+    bottom: -20px;
+    left: -20px;
+    animation-delay: 1s;
+}
+
+.bottom-right {
+    bottom: -20px;
+    right: -20px;
+    animation-delay: 1.5s;
+}
+
+/* Animações */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aparecer suavemente */
+.animated {
+    animation: fadeIn 1.5s ease-in-out both;
+}
